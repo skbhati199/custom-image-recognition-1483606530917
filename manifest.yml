@@ -1,0 +1,15 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: custom-image-recognition
+  host: custom-image-recognition
+  disk_quota: 1024M
+  services:
+  - Visual-Recognition-images
+  - availability-monitoring-auto
+  env:
+    NODE_ENV: production
+    VISUAL_RECOGNITION_API_KEY: 5552f57bbc8cc51a659349782c19a92fef079c76
+  command: npm start
